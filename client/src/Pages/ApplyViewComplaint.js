@@ -1,50 +1,50 @@
 import React, { useState } from 'react';
 import withAuth from './WithAuth';
-import ViewLeave from './ViewLeave';
+import ComplaintsView from './ViewComplaints';
 
-const ApplyLeaveView = ({ token }) => {
-  const [leaveType, setLeaveType] = useState('');
-  const [leaveDate, setLeaveDate] = useState('');
-  const [leaveTime, setLeaveTime] = useState('');
-  const [leaveDuration, setLeaveDuration] = useState('');
+const ApplyComplaintView = ({ token }) => {
+  const [complaintType, setComplaintType] = useState('');
+  const [complaintDate, setComplaintDate] = useState('');
+  const [complaintDescription, setComplaintDescription] = useState('');
+  const [complaintSeverity, setComplaintSeverity] = useState('');
 
-  const handleLeaveTypeChange = (e) => {
-    setLeaveType(e.target.value);
+  const handleComplaintTypeChange = (e) => {
+    setComplaintType(e.target.value);
   };
 
-  const handleLeaveDateChange = (e) => {
-    setLeaveDate(e.target.value);
+  const handleComplaintDateChange = (e) => {
+    setComplaintDate(e.target.value);
   };
 
-  const handleLeaveTimeChange = (e) => {
-    setLeaveTime(e.target.value);
+  const handleComplaintDescriptionChange = (e) => {
+    setComplaintDescription(e.target.value);
   };
 
-  const handleLeaveDurationChange = (e) => {
-    setLeaveDuration(e.target.value);
+  const handleComplaintSeverityChange = (e) => {
+    setComplaintSeverity(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const leaveApplication = {
-      leaveType,
-      leaveDate,
-      leaveTime,
-      leaveDuration
+    const complaint = {
+      complaintType,
+      complaintDate,
+      complaintDescription,
+      complaintSeverity
     };
 
-    fetch('http://localhost:8000/api/v1/student/leave/', {
+    fetch('http://localhost:8000/api/v1/student/complaint/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`
       },
-      body: JSON.stringify(leaveApplication)
+      body: JSON.stringify(complaint)
     })
       .then(response => response.json())
       .then(data => {
-        //console.log(data); 
+        console.log(data);
       })
       .catch(error => {
         console.error('Error:', error);
@@ -53,56 +53,56 @@ const ApplyLeaveView = ({ token }) => {
 
   return (
     <div style={styles.container}>
-      <h2 style={styles.heading}>Apply Leave</h2>
+      <h2 style={styles.heading}>Apply Complaint</h2>
       <form onSubmit={handleSubmit} style={styles.form}>
         <div style={styles.formGroup}>
-          <label htmlFor="leaveType" style={styles.label}>Leave Type:</label>
+          <label htmlFor="complaintType" style={styles.label}>Complaint Type:</label>
           <input
             type="text"
-            id="leaveType"
-            value={leaveType}
-            onChange={handleLeaveTypeChange}
+            id="complaintType"
+            value={complaintType}
+            onChange={handleComplaintTypeChange}
             style={styles.input}
           />
         </div>
         <div style={styles.formGroup}>
-          <label htmlFor="leaveDate" style={styles.label}>Leave Date:</label>
+          <label htmlFor="complaintDate" style={styles.label}>Complaint Date:</label>
           <input
             type="text"
-            id="leaveDate"
-            value={leaveDate}
-            onChange={handleLeaveDateChange}
+            id="complaintDate"
+            value={complaintDate}
+            onChange={handleComplaintDateChange}
             style={styles.input}
           />
         </div>
         <div style={styles.formGroup}>
-          <label htmlFor="leaveTime" style={styles.label}>Leave Time:</label>
+          <label htmlFor="complaintDescription" style={styles.label}>Complaint Description:</label>
           <input
             type="text"
-            id="leaveTime"
-            value={leaveTime}
-            onChange={handleLeaveTimeChange}
+            id="complaintDescription"
+            value={complaintDescription}
+            onChange={handleComplaintDescriptionChange}
             style={styles.input}
           />
         </div>
         <div style={styles.formGroup}>
-          <label htmlFor="leaveDuration" style={styles.label}>Leave Duration:</label>
+          <label htmlFor="complaintSeverity" style={styles.label}>Complaint Severity:</label>
           <input
             type="text"
-            id="leaveDuration"
-            value={leaveDuration}
-            onChange={handleLeaveDurationChange}
+            id="complaintSeverity"
+            value={complaintSeverity}
+            onChange={handleComplaintSeverityChange}
             style={styles.input}
           />
         </div>
         <button type="submit" style={styles.button}>Apply</button>
       </form>
-      <ViewLeave />
+      <ComplaintsView />
     </div>
   );
 };
 
-export default withAuth(ApplyLeaveView);
+export default withAuth(ApplyComplaintView);
 
 const styles = {
   container: {
@@ -120,6 +120,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     maxWidth: '400px',
+    width: '100%',
   },
   formGroup: {
     marginBottom: '20px',
