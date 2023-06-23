@@ -29,8 +29,6 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Create a registration object with the provided parameters
     const registrationData = {
       name,
       regNo,
@@ -39,7 +37,6 @@ const Register = () => {
       roomNo
     };
 
-    // Send the registration data to the API endpoint
     fetch('http://localhost:8000/api/v1/student/auth/register', {
       method: 'POST',
       headers: {
@@ -49,8 +46,8 @@ const Register = () => {
     })
       .then(response => response.json())
       .then(data => {
-        // Handle the response from the API
-        console.log(data); // You can do something with the response data here
+  
+        console.log(data); 
       })
       .catch(error => {
         console.error('Error:', error);

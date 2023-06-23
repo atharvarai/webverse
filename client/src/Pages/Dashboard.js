@@ -8,11 +8,7 @@ const Dashboard = ({ token }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Access the token through the props
     console.log(token);
-    // Use the token for any necessary authentication or API calls
-
-    // Redirect to HomePage if token exists
     if (token) {
       navigate('/');
     }
