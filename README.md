@@ -7,8 +7,9 @@ This is a Hostel Management System designed specifically for VIT University. The
 **Login and Registration:** The system allows students, wardens, and faculty to create their accounts and login to the system.<br />
 **Dashboard:** Once logged in, the users will be directed to their respective dashboards, where they can view and manage their hostel-related information.<br />
 **Room Allocation:** The system allows wardens to allocate rooms to students and update the room status.<br />
-**Complaints and Feedback:** Students can raise complaints and provide feedback on the hostel-related services, and the wardens can take appropriate action to resolve the issues.<br />
-**Leave Request:** Students can request for leave, and the wardens can approve or reject the leave request based on the availability of the rooms.<br />
+**Mess selection:** The system allows students to select their mess.<br />
+**Complaints and Complaints history:** Students can raise complaints and provide feedback on the hostel-related services, and the wardens can take appropriate action to resolve the issues.<br />
+**Leave Request and Leave history:** Students can request for leave, and the wardens can approve or reject the leave request based on the availability of the rooms.<br />
 # **Technologies Used**
 * HTML
 * CSS
