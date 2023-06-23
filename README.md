@@ -1,4 +1,4 @@
-![2f635499-3415-4e65-8520-7762af0f2e12](https://github.com/atharvarai/webverse/assets/86284486/99a1a127-92d8-46d9-8437-89a9f851b81d)## webverse - Team Archangel
+## webverse - Team Archangel
 
 # **Hostel Management System for VIT University**
 This is a Hostel Management System designed specifically for VIT University. The system allows students, wardens, and faculty to create and manage their accounts, enabling them to access different features and functionalities of the system.
@@ -18,22 +18,39 @@ This is a Hostel Management System designed specifically for VIT University. The
 Clone the repository using git clone **https://github.com/atharvarai/webverse**
 
 # **Working routes of the website**
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
+* /api/v1/student/auth/login
+* /api/v1/student/auth/register
+* **POST**, **GET**:  /api/v1/student/leave/                
+* **POST**, **GET**:  /api/v1/student/complaint/            
+* /api/v1/student/course/add-course
+* **PUT**, **GET**: /api/v1/student/mess-details/
+* **POST**: /api/v1/student/event/
+* /
+* /student-login
+* /dashboard
+* /applyviewleave
+* /applyviewcomplaint
+* /mess
+* /warden-login
 
 # **Screenshots of the website**
+
+![1](https://github.com/atharvarai/webverse/assets/86284486/935cd05f-a706-4dd7-a001-467d1b7642fb)
+![2](https://github.com/atharvarai/webverse/assets/86284486/9558e6f2-b538-46ea-a890-9f05316ca50c)
+![3](https://github.com/atharvarai/webverse/assets/86284486/891f0cfe-fd08-4bb1-870f-f4092e1d8e62)
+![4](https://github.com/atharvarai/webverse/assets/86284486/e4c0647d-e1c6-4e57-9967-bf7147b74cd9)
+![5](https://github.com/atharvarai/webverse/assets/86284486/1df39b8d-82a1-4d0d-821d-3f77a89eea3a)
+![6](https://github.com/atharvarai/webverse/assets/86284486/4fa3ef4e-9506-404a-a64e-fcc0e7c1ab0b)
+![7](https://github.com/atharvarai/webverse/assets/86284486/562d068d-f394-4540-bbfb-6dda09979669)
+![8](https://github.com/atharvarai/webverse/assets/86284486/eab39908-30ef-4665-ac84-753be679d990)
+![9](https://github.com/atharvarai/webverse/assets/86284486/273a0567-123c-4748-91df-429c3b2ef825)
+![10](https://github.com/atharvarai/webverse/assets/86284486/c12db561-f2d6-4559-ab7d-a426e75226ea)
+![11](https://github.com/atharvarai/webverse/assets/86284486/6eda2d22-e5d2-46b7-8645-67352bd8d79f)
+![12](https://github.com/atharvarai/webverse/assets/86284486/1bd638da-1d82-4122-8a69-4ac92604b51e)
+
+
+
+
 
 
 
