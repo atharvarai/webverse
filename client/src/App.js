@@ -10,12 +10,16 @@ import ApplyRoomView from './Pages/ApplyViewRoom';
 import ApplyCoursePage from './Pages/ApplyCoursePage';
 import MessDetailsView from './Pages/ApplyForMess'
 import EventsView from "./Pages/EventspostPage";
+import HomePage from './Components/HomePage';
+import WardenLogin from './Pages/wardenlogin';
+import WardenDash from './Pages/WardenDash';
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/student-login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/applyviewleave" element={<ApplyLeaveView />} />
@@ -24,6 +28,8 @@ function App() {
           <Route path="/courses" element={<ApplyCoursePage />} />
           <Route path="/mess" element={<MessDetailsView />} />
           <Route path="/events" element={<EventsView />} />
+          <Route path="/warden-login" element={<WardenLogin/>} />
+          <Route path="/warden-dash" element={<WardenDash/>} />
           
         </Routes>
       </BrowserRouter>
